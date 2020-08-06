@@ -11,4 +11,4 @@ mem.unlink(1);
 
 var Execution= new CodeExecutionTable("EXECUTIONTABLE",["var A=10;","var B='ciao'"]);
 Execution.Begin();
-Execution.moveFocus(1);
+Execution.moveFocusedLine(1);

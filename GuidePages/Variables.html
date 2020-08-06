@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/General.css">
+    <link rel="stylesheet" href="../CSS/Canvas.css">
+    <title>Variabili</title>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>Le variabili</h1>
+        </header>
+        Le variabili sono il sangue di un programma. Le variabili contengono i dati utilizzati da un programma.
+        Le variabili sono contenitori che tengono al loro interno i dati.
+        Esistono 3 modi per dichiarare variabili usando 3 parole chiave :
+        <ul>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+        </ul>
+        Queste 3 parole chiave definiscono il comportamento della variabile e l'accessibilità (cioè da che punti)
+        del programma sono accessibili.
+        Per questa guida eviteremo l'utilizzo di "var" in quanto porta spesso a generare errori difficili da trovare
+        e difficili da correggere.
+        Una variabile viene identificata con un nome , una variabile può contenere qualsiasi lettera, non deve iniziare con un numero
+        e può contenere anche il carattere underscore _ .
+        Per dichiarare una variabile , cioè praticamente dire all'interprete di javascript di "prenotare" una zona
+        di memoria dedicata ad essa si scrive la parola chiave scelta quindi let oppure const seguita dal nome della variabile.
+        Per esempio per definire una variabile chiamata totale possiamo usare le due seguenti possibilità:
+        
+        <span class="code">let totale;</span>
+        <span class="code"><del> const totale; </del>(perchè questa opzione non è corretta sarà spiegato a breve)</span>
+        
+        Così abbiamo informato l'interprete di prenotare la memoria ma non abbiamo inserito nessun dato nella memoria.
+        In questo capitolo consideriamo solo numeri come dati nel prossimo vedremo anche dati più complessi.
+        Per assegnare a questa area di memoria prenotata un valore usiamo l'operatore di assegnamento il segno di uguale ( = ).
+        Per esempio un codice che dichiara una variabile totale e assegna ad essa il valore 10:
+        <span class="code">
+            let totale;
+            <br>
+            totale=10;
+        </span>
+        <canvas id="codeExample1">
+
+        </canvas>
+        <table id="tableExample1">
+
+        </table>
+        <table id="tableExplanation1">
+
+        </table>
+        <input type="button" id="button1" value="avanti">
+        <br>
+        In fase di dichiarazione è possibile ed è buona norma fornire un valore iniziale ad ogni variabile.
+        La sintassi è simile a quella sopra.
+        <span class="code">
+            let totale=10;
+        </span>
+        <canvas id="codeExample2">
+
+        </canvas>
+        <table id="tableExample2">
+
+        </table>
+        <table id="tableExplanation2">
+
+        </table>
+        <input type="button" id="button2" value="avanti">
+        <br>
+        La differenza sostanziale che c'è tra const e let è il fatto che una variabile dichiarata con const deve avere
+        un valore iniziale e dopo la dichiarazione non è possibile effettuare assegnamenti, come dice la parola const (constant)
+        il valore di una variabile dichiarata const non può variare, in contrasto una variabile dichiarata con var o let può
+        avere assegnamenti più volte nel corso di un programma.
+        <span class="code">
+            const totale=10;
+        </span>
+        <canvas id="codeExample3">
+
+        </canvas>
+        <table id="tableExample3">
+
+        </table>
+        <table id="tableExplanation3">
+
+        </table>
+        <input type="button" id="button3" value="avanti">
+        <br>
+        Rappresenteremo da ora in rosso i collegamenti tra variabile e valore se la variabile è const per 
+        evidenziare il fatto che siano diverse.
+        <br>
+        Questo è un esempio corretto di dichiarazione di una variabile usando const.
+        L'utilizzo di const è utile in diversi ambiti, quando si hanno dei dati che si vogliono accedere e non si vuole che 
+        altri utenti possano modificarne il valore, quando si ha costanti matematiche complesse a cui si vuole dare un nome più
+        facile e comprensibile rispetto alla loro forma letterale. Una costante usata in javascript per alcuni siti 
+        che mostrano grafici o effettuano calcoli è il pigreco anzichè ogni volta che serve il suo valore scrivere decine e decine
+        di cifre basta all'inizio del programma salvare il valore in una variabile const e poi accedervici nel resto del codice.
+    </article>
+    <a style="padding:1vmax;display: block;" href="./VariableTypes.html">Prossimo Capitolo</a>
+    <br>
+    <a style="padding:1vmax;display: block;" href="../home.html">Home</a>
+
+</body>
+<script src="../JS/DrawMemory.js"></script>
+<script src="../JS/DrawCodeExecution.js"></script>
+<script src="../JS/DrawExplanation.js"></script>
+<script src="../JS/Variables/Example1.js"></script>
+<script src="../JS/Variables/Example2.js"></script>
+<script src="../JS/Variables/Example3.js"></script>
+</html>

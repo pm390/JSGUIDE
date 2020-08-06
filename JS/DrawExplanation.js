@@ -1,21 +1,20 @@
-
-class CodeExecutionTable
+class CodeExplanation
 {
-    constructor(id,instructions)
+    constructor(id,explanations)
     {
-        this.inst=instructions;
-        this.length=instructions.length;
+        this.inst=explanations;
+        this.length=explanations.length;
         this.table=$("#"+id);
-        this.addRow(this.length,instructions);
+        this.addRow(this.length,explanations);
         this.focusedLine=-1;
-        this.length=instructions.length;
+        this.length=explanations.length;
     }
 
-    addRow(amount,instrcutions)
+    addRow(amount,explanations)
     {
         for(let i=0;i<amount;++i)
         {
-            this.table.append("<tr><td>---------</td><td>"+ instrcutions[i] +"</td></tr>");
+            this.table.append("<tr><td>---------</td><td>"+ explanations[i] +"</td></tr>");
         }
     }
 
@@ -59,8 +58,4 @@ class CodeExecutionTable
         ArrowCell.innerHTML="---------";
         $(ContentCell).removeClass("focused");
     }
-
 }
-
-
-

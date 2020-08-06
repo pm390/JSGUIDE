@@ -67,7 +67,7 @@ class Memory
         this.Links=[];
     }
 
-    REDO()
+    REDRAW()
     {
 
         this.ctx.clearRect(0,0,this.width,this.height);
@@ -158,7 +158,7 @@ class Memory
 
     UpdateCanvasContent()
     {
-        this.REDO();
+        this.REDRAW();
         this.ctx.font=FONT;
         this.ctx.textAlign = "center";
         for(let i=0;i<this.VarContent.length;++i)
@@ -182,19 +182,30 @@ class Memory
         {
             this.ctx.beginPath();
 
+            if(this.Links[i].constant)
+            {
+                this.ctx.strokeStyle = '#ff0000';
+            }
+            else
+            {
+                this.ctx.strokeStyle = '#000000';
+            }
+
             this.ctx.moveTo(this.leftSide+(CELLSIZE/2)
                 , (CELLSIZE+this.varSpacing)*this.Links[i][0]+this.varSpacing+CELLSIZE/2);
 
             this.ctx.lineTo(this.rightSide-(CELLSIZE/2)
                 , (CELLSIZE+this.memSpacing)*this.Links[i][1]+this.memSpacing+CELLSIZE/2);
-
+ 
             this.ctx.stroke();
+            this.ctx.strokeStyle = '#000000';
         }
     }
 
-    link(VarIndex,MemIndex)
+    link(VarIndex,MemIndex,isConst=false)
     {
         this.Links[this.Links.length]=[VarIndex,MemIndex];
+        this.Links[this.Links.length-1].constant=isConst;
         this.UpdateCanvasContent();
     }
 

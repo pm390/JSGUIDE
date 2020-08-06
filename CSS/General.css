@@ -1,0 +1,19 @@
+.code
+{
+    font-size: 1.5rem;
+    display: block;
+}
+
+canvas,table
+{
+    display:inline-block;
+}
+input
+{
+    display: block;
+}
+article
+{
+    width: 95vw;
+    margin:auto;
+}
