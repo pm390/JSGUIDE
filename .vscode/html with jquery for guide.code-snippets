@@ -1,0 +1,38 @@
+{
+	"html5:jqueryforguide":
+	{
+		"scope": "html,xhtml",
+		"prefix": ["JhtmlGuide","HtmljGuide"],
+		"body": ["<!DOCTYPE html>",
+			"<html lang=\"it\">",
+			"<head>",
+			"\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> ", 
+			"\t<link rel=\"stylesheet\" href=\"../CSS/Canvas.css\">",
+    		"\t<link rel=\"stylesheet\" href=\"../CSS/General.css\">",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<title>${1}</title>",
+		"</head>",
+		"<body>",
+		"\t<article>",
+		"\t\t<header>",
+		"\t\t\t<h1>",
+		"\t\t\t\t${2}",
+		"\t\t\t<h1>",
+		"\t\t<header>",
+		"\t\t$0",
+		"\t\t<a style=\"padding:1vmax;display: block;\" href=\"javascript:alert('inserire link')\">Prossimo Capitolo</a>",
+		"\t\t<br>",
+		"\t\t<a style=\"padding:1vmax;display: block;\" href=\"../home.html\">Home</a>",
+		"\t<article>",
+		"\t<script src=\"../JS/DrawMemory.js\"></script>",
+		"\t<script src=\"../JS/DrawCodeExecution.js\"></script>",
+		"\t<script src=\"../JS/DrawExplanation.js\"></script>",
+		"\t<script src=\"\"></script>",
+		"\t<script src=\"\"></script>",
+		"</body>",
+		"",
+		"</html>"],
+		"description" : "jquery template."
+	}
+}
